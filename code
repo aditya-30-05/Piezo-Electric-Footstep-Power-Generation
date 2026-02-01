@@ -1,0 +1,75 @@
+/****************************************************
+ PROJECT NAME : Piezoelectric Footstep Power Generation
+ BOARD        : Arduino UNO
+ AUTHOR       : Student Project
+ ****************************************************/
+
+// ---------------- PIN DEFINITIONS ----------------
+#define PIEZO_PIN A0        // Piezo sensor connected to Analog pin A0
+#define LED_PIN   8         // LED connected to digital pin 8
+
+// ---------------- VARIABLES ----------------
+int piezoADC = 0;           // Raw ADC value (0–1023)
+float voltage = 0.0;        // Converted voltage value
+int stepCount = 0;          // Number of footsteps detected
+int powerEvents = 0;        // Power generation events
+
+// Threshold settings
+const int stepThreshold = 70;     // Minimum ADC value for valid footstep
+const float referenceVoltage = 5.0; // Arduino reference voltage
+
+// Timing control
+unsigned long lastStepTime = 0;
+const unsigned long debounceDelay = 300; // ms
+
+// ---------------- SETUP FUNCTION ----------------
+void setup() {
+  pinMode(LED_PIN, OUTPUT);
+  digitalWrite(LED_PIN, LOW);
+
+  Serial.begin(9600);
+  Serial.println("====================================");
+  Serial.println(" PIEZOELECTRIC FOOTSTEP POWER SYSTEM ");
+  Serial.println("====================================");
+  Serial.println("System Initialized...\n");
+}
+
+// ---------------- LOOP FUNCTION ----------------
+void loop() {
+
+  // Read analog value from piezo
+  piezoADC = analogRead(PIEZO_PIN);
+
+  // Convert ADC value to voltage
+  voltage = (piezoADC * referenceVoltage) / 1023.0;
+
+  // Display raw & converted values
+  Serial.print("ADC Value: ");
+  Serial.print(piezoADC);
+  Serial.print(" | Voltage: ");
+  Serial.print(voltage);
+  Serial.println(" V");
+
+  // Detect footstep
+  if (piezoADC > stepThreshold) {
+
+    // Debounce logic to avoid multiple counts
+    if (millis() - lastStepTime > debounceDelay) {
+
+      stepCount++;
+      powerEvents++;
+
+      Serial.println("⚡ FOOTSTEP DETECTED!");
+      Serial.print("Total Steps: ");
+      Serial.println(stepCount);
+
+      digitalWrite(LED_PIN, HIGH);  // Turn LED ON
+      delay(100);
+      digitalWrite(LED_PIN, LOW);
+
+      lastStepTime = millis();
+    }
+  }
+
+  delay(50); // Small delay for stability
+}
