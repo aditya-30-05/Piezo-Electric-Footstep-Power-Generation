@@ -108,7 +108,6 @@ Using multiple piezo sensors increases the total generated output.
 ## ⚠️ Limitations
 
 - 🔋 Low power output  
-- ⚡ Not suitable for high-power appliances  
 - 🚶 Depends on foot traffic  
 - 📉 Output varies with pressure applied  
 
@@ -129,5 +128,6 @@ Using multiple piezo sensors increases the total generated output.
 The **Piezoelectric Footstep Power Generation System** proves that small amounts of energy can be harvested from daily human activities. While it cannot replace conventional power sources, it plays a vital role in **sustainable energy awareness** and **smart infrastructure development**.
 
 ---
+
 
 
