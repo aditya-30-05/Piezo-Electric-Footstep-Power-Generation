@@ -9,3 +9,48 @@ SCL → A5
 #include <Wire.h>
 #include <LiquidCrystal_I2C.h>
 
+// LCD address 0x27, 16 columns, 2 rows
+LiquidCrystal_I2C lcd(0x27, 16, 2);
+
+#define PIEZO_PIN A0
+
+int adcValue = 0;
+float voltage = 0.0;
+int stepCount = 0;
+
+const int threshold = 70;
+const float refVoltage = 5.0;
+
+unsigned long lastStepTime = 0;
+
+void setup() {
+  lcd.init();
+  lcd.backlight();
+
+  lcd.setCursor(0, 0);
+  lcd.print("Piezo Footstep");
+  lcd.setCursor(0, 1);
+  lcd.print("System Ready");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+
+  adcValue = analogRead(PIEZO_PIN);
+  voltage = (adcValue * refVoltage) / 1023.0;
+
+  // Footstep detection
+  if (adcValue > threshold && millis() - lastStepTime > 300) {
+    stepCount++;
+    lastStepTime = millis();
+  }
+
+  // Display voltage
+  lcd.setCursor(0, 0);
+  lcd.print("Voltage: ");
+  lcd.print(voltage, 2);
+  lcd.print("V ");
+
+  // Display step count
+  lcd.se
