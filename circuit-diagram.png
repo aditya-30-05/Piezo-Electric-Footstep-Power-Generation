@@ -1,0 +1,5 @@
+Piezo +  → Bridge Rectifier → Capacitor + → A0
+Piezo -  → Bridge Rectifier → Capacitor - → GND
+
+LED +    → D8 (via 220Ω resistor)
+LED -    → GND
