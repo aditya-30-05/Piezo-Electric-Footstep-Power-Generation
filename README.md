@@ -1,100 +1,69 @@
-\# ⚡ Piezo Electric Footstep Power Generation
+# ⚡ Piezoelectric Footstep Power Generation System
 
+> Harvesting clean, renewable energy from every human step 👣
 
+---
 
-\## 📌 Project Overview
+## 📌 Project Overview
 
-This project demonstrates how electrical energy can be generated using
+The **Piezoelectric Footstep Power Generation System** is a renewable energy project that converts **mechanical pressure from human footsteps into electrical energy** using piezoelectric sensors.
 
-piezoelectric sensors when pressure is applied by human footsteps.
+When pressure is applied on the sensors, electrical voltage is generated, stored, and monitored using an **Arduino microcontroller**. The system is suitable for **low-power applications** and demonstrates the concept of **energy harvesting**.
 
-The generated energy can be stored and used for low-power applications.
+---
 
+## 🎯 Objectives
 
+- ⚡ Generate electricity using footstep pressure  
+- 🧠 Understand the working of piezoelectric sensors  
+- 🌱 Promote renewable and sustainable energy solutions  
+- 🏙️ Explore applications in smart cities and public infrastructure  
 
-\## 🎯 Objective
+---
 
-\- To generate electricity using footstep pressure
+## 🧠 Working Principle
 
-\- To understand the working of piezoelectric sensors
+The project is based on the **piezoelectric effect**:
 
-\- To promote renewable and sustainable energy solutions
+> Certain materials generate electrical voltage when mechanical stress is applied to them.
 
+### Step-by-step Working:
+1. Human footstep applies pressure on the piezo sensor  
+2. Piezo sensor generates AC voltage  
+3. Bridge rectifier converts AC to DC  
+4. Capacitor stores the generated energy  
+5. Arduino measures the voltage  
+6. Output is displayed on a 16×2 LCD  
 
+Using multiple piezo sensors increases the total generated output.
 
-\## 🧠 Working Principle
+---
 
-When mechanical pressure is applied on a piezoelectric sensor,
+## 🛠️ Components Used
 
-it produces an electrical voltage due to the piezoelectric effect.
+- Piezoelectric Sensors  
+- Bridge Rectifier (Diodes)  
+- Capacitor (Energy Storage)  
+- Arduino UNO  
+- 16×2 LCD Display (I2C)  
+- LED (Indicator / Load)  
+- Resistors  
+- Connecting Wires  
+- Wooden / Acrylic Base  
 
-Multiple sensors connected together increase the generated output.
+---
 
+## 🔌 Circuit Diagram
 
+- Piezo Sensor → Bridge Rectifier → Capacitor  
+- Capacitor Output → Arduino Analog Pin (A0)  
+- LCD (I2C) → Arduino (A4, A5)  
+- LED → Arduino Digital Pin  
 
-\## 🛠️ Components Used
+*(Refer to circuit diagram image in the project folder)*
 
-\- Piezoelectric Sensors
+---
 
-\- Bridge Rectifier
+## 📈 Power & Energy Calculation
 
-\- Capacitor
-
-\- Rechargeable Battery
-
-\- LED / Load
-
-\- Connecting Wires
-
-\- Wooden / Acrylic Base
-
-
-
-\## 🔌 Applications
-
-\- Railway stations
-
-\- Shopping malls
-
-\- Footpaths
-
-\- Smart cities
-
-\- Energy harvesting systems
-
-
-
-\## 🌱 Advantages
-
-\- Renewable energy source
-
-\- Low maintenance
-
-\- Eco-friendly
-
-\- Useful for low-power devices
-
-
-
-\## ⚠️ Limitations
-
-\- Low power output
-
-\- Not suitable for high-power appliances
-
-\- Depends on foot traffic
-
-
-
-\## 🚀 Future Scope
-
-\- Power storage optimization
-
-\- IoT-based energy monitoring
-
-\- Integration with smart grids
-
-
-
-
-
+### Voltage Calculation:
