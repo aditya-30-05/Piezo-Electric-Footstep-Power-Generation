@@ -1,0 +1,11 @@
+LCD CONNECTIONS (I2C)
+
+
+VCC → 5V
+GND → GND
+SDA → A4
+SCL → A5
+
+#include <Wire.h>
+#include <LiquidCrystal_I2C.h>
+
