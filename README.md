@@ -67,3 +67,67 @@ Using multiple piezo sensors increases the total generated output.
 ## 📈 Power & Energy Calculation
 
 ### Voltage Calculation:
+
+
+
+
+> Note: Generated power is in **milliwatts**, suitable only for low-power devices.
+
+---
+
+## 📟 Output Display
+
+- LCD displays:
+  - Generated Voltage
+  - Total Footsteps Count
+- LED glows when a footstep is detected
+
+---
+
+## 🔌 Applications
+
+- 🚉 Railway stations  
+- 🛍️ Shopping malls  
+- 🚶 Footpaths and walkways  
+- 🏙️ Smart cities  
+- 🔋 Energy harvesting systems  
+- 🌐 IoT-based low-power devices  
+
+---
+
+## 🌱 Advantages
+
+- ♻️ Renewable and eco-friendly  
+- 🌍 Pollution-free energy  
+- 🔧 Low maintenance  
+- 👣 Utilizes wasted human energy  
+- 🔌 Ideal for demonstration and research  
+
+---
+
+## ⚠️ Limitations
+
+- 🔋 Low power output  
+- ⚡ Not suitable for high-power appliances  
+- 🚶 Depends on foot traffic  
+- 📉 Output varies with pressure applied  
+
+---
+
+## 🚀 Future Scope
+
+- 🔋 Improved energy storage systems  
+- 📊 IoT-based energy monitoring  
+- 🧠 Smart floor integration  
+- 🌐 Smart grid connectivity  
+- 🏢 Large-scale public deployment  
+
+---
+
+## 📌 Conclusion
+
+The **Piezoelectric Footstep Power Generation System** proves that small amounts of energy can be harvested from daily human activities. While it cannot replace conventional power sources, it plays a vital role in **sustainable energy awareness** and **smart infrastructure development**.
+
+---
+
+
