@@ -74,4 +74,6 @@ void loop() {
 
   delay(50); // Small delay for stability
 }
+//Code LCD + Piezo
+
 
