@@ -1,7 +1,7 @@
 /****************************************************
  PROJECT NAME : Piezoelectric Footstep Power Generation
  BOARD        : Arduino UNO
- AUTHOR       : Student Project
+
  ****************************************************/
 
 // ---------------- PIN DEFINITIONS ----------------
@@ -75,5 +75,6 @@ void loop() {
   delay(50); // Small delay for stability
 }
 //Code LCD + Piezo
+
 
 
