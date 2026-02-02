@@ -8,6 +8,7 @@
 #define PIEZO_PIN A0        // Piezo sensor connected to Analog pin A0
 #define LED_PIN   8         // LED connected to digital pin 8
 
+
 // ---------------- VARIABLES ----------------
 int piezoADC = 0;           // Raw ADC value (0–1023)
 float voltage = 0.0;        // Converted voltage value
@@ -73,3 +74,4 @@ void loop() {
 
   delay(50); // Small delay for stability
 }
+
